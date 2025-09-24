@@ -1,0 +1,296 @@
+/* 1º importar uma fonte do google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* 2º aplicar a fonte no body para toda página */
+body {
+    font-family: 'Public Sans', sans-serif;
+}
+
+/* 3º ou pode ser o primeiro mesmo: RESETAR O CSS PADRÃO DO HTML NO SITE (O asterísco serve para estilizar todos o elementos HTML da pág) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #000;
+}
+
+img{
+    max-width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+/* BARRA de rolagem ficar mais suave */
+html{
+    scroll-behavior: smooth;
+}
+
+/* LOGO tamanho da imagem da logo é definida*/
+.logo .imagem{
+    width: 150px;
+}
+
+/* alinhamento de posição dos items com classe logo */
+.logo{
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+/* comando TRANSITION usado juntamente com outro comando abaixo HOVER para aplicar cor quando passar o mouse e o tempo da transição */
+.logo .titulo{
+    margin-left: 7px;
+    font-size: 19px;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
+}
+
+.logo .titulo:hover{
+    color: rgb(203, 163, 107);
+}
+/* LOGO */
+
+/* CABEÇALHO */
+/* (organizar os botões do menu) */
+.cabecalho{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 0;
+    max-width: 1170px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+/* RESPONSIVIDADE PARA O CABEÇALHO */
+@media(max-width: 624px){
+    .cabecalho{
+        justify-content: center;
+    }
+
+    .cabecalho .logo{
+        margin-bottom: 30px;
+    }
+
+    .cabecalho .menu .item a{
+        font-size: calc(0.6em + 1vw)
+    }
+}
+
+.cabecalho .menu{
+    display: flex;
+}
+
+/* separando cada botão do menu */
+.cabecalho .menu .item{
+    margin: 10px;
+}
+
+.cabecalho .menu .item a{
+    padding: 15px;
+    transition: 0.3s ease-in-out;
+}
+.cabecalho .menu .item a:hover{
+    background-color: rgb(230, 215, 196);
+    color: rgb(0, 0, 0);
+}
+/* CABEÇALHO */
+
+/* PAINEL */
+.conteudo-principal .paineis{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    position: relative;
+}
+
+/* RESPONSIVO DOS PAINEIS */
+@media(max-width: 900px){
+    .conteudo-principal .paineis{
+        height: 500px;
+    }
+}
+
+.conteudo-principal .paineis .imagem-painel{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    filter: brightness(70%);
+    /* criando animação de mostrar e esconder elementos  */
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+/* Subir as imagens no conteúdo do site */
+.conteudo-principal .paineis .projeto1{
+    background-image: url('../imagens/Poltrona\ de\ Ferro\ e\ Madeira\,\ Estofada\ com\ Braço\ Costela\ Living\ Outdoor\ Espresso\ Móveis.jpeg');
+}
+
+.conteudo-principal .paineis .projeto2{
+    background-image: url('../imagens/Estante\ para\ TV\ e\ Decor.jpeg');
+}
+
+.conteudo-principal .paineis .projeto3{
+    background-image: url('../imagens/Cadeira\ Monserrant.jpeg');
+}
+
+.conteudo-principal .paineis .imagem-painel.mostrar{
+    opacity: 1;
+}
+
+.conteudo-principal .paineis .titulo{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: calc(1em + 1vw);
+}
+
+.conteudo-principal .paineis .seta{
+    background-image: url('../imagens/seta.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    text-indent: 100%;
+    overflow: hidden;
+}
+.conteudo-principal .paineis .seta.btn-voltar{
+    left: 20px;
+    transform: rotateY(180deg);
+}
+.conteudo-principal .paineis .seta.btn-avancar{
+    right: 20px;
+}
+/* PAINEL */
+
+/* QUEM SOMOS */
+
+.quem-somos .conteudo{
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.quem-somos .conteudo .informacoes{
+    width: 48%;
+}
+
+.quem-somos .conteudo .imagem{
+    width: 40%;
+}
+
+/* por mim */
+.quem-somos .conteudo{
+    background-color: rgb(166, 151, 132);
+    padding: 100px 50px;
+    gap: 30px;
+    margin-bottom: 100px;
+    
+}
+
+.quem-somos .conteudo .informacoes .titulo{
+    font-size: 70px;
+    color: rgb(239, 229, 217);
+    margin-bottom: 20px;
+    position: relative;
+    height: 600px;
+    
+}
+
+.quem-somos .conteudo .informacoes .texto{
+    font-size: 20px;
+    line-height: 1.5;
+    position: absolute;
+    top: 125%;
+    width: 50%;
+    text-align: justify;
+    color: #ffffff;
+}
+
+@media(max-width: 1200px){
+    .quem-somos .conteudo{
+        flex-direction: column;
+        text-align: center;
+        padding: 100px 30px;
+    }
+
+    .quem-somos .conteudo .imagem{
+        display: none;
+    }
+
+    .quem-somos .conteudo .informacoes{
+        width: 100%;
+    }
+}
+/* QUEM SOMOS */
+
+/* Rodapé (Footer) */
+.rodape{
+    padding: 80px 0 20px 0;
+}
+
+.rodape .navegacao{
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.rodape .navegacao .logo .imagem{
+    width: 100px;
+}
+
+.rodape .redes-sociais{
+    display: flex;
+}
+
+.rodape .redes-sociais a{
+    display: flex;
+    justify-content: center;
+    margin: 0 10px;
+    font-size: 30px;
+    border: 2px solid #111;
+    border-radius: 50%;
+    padding: 15px;
+    width: 65px;
+    transition: 0.3s ease-in-out;
+}
+
+.rodape .redes-sociais a:hover{
+    background-color: rgb(230, 215, 196);
+    border-color: rgb(230, 215, 196);
+}
+
+.rodape .navegacao .logo .imagem .titulo{
+    width: 50px;
+}
+
+.rodape .copyright{
+    margin-top: 70px;
+    text-align: center;
+}
+
+@media(max-width: 940px){
+    .rodape .navegacao{
+        justify-content: center;
+    }
+
+    .rodape .navegacao .logo .rodape .navegacao .redes-sociais{
+        width: 100%;
+        justify-content: center;
+    }
+}
+/* Rodapé (Footer) */

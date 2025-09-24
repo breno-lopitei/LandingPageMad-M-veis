@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Somos uma loja apaixonada por inovação">
+    
+<!-- Link dos ícones do rodapé -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- link para ativar o css junto com HTML -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>Móveis Madá</title>
+
+</head>
+<body>
+    <!-- Colocar a logo no cabeçalho -->
+    <header class="cabecalho">
+         <a href="#" class="logo">
+            <img src="./imagens/Logo Cabecalho.png" alt="Logo Madá" class="imagem">
+            <span class="titulo">Madá Fornitune</span>
+         </a>
+
+<!-- Menu opções navegação tags utilizadas para elementos de navegação -->
+         <nav>
+            <ul class="menu">
+                <li class="item">
+                    <a href="#projetos">Projetos</a>
+                </li>
+
+                <li class="item">
+                    <a href="#quem-somos">Quem Somos</a>
+                </li>
+
+                <li class="item">
+                    <a href="#contato">Contato</a>
+                </li>
+            </ul>            
+         </nav>
+    </header>
+
+<!-- para fazer o painel principal com as imagens demonstrativas use o campo Main e coloque classes para estilizar no CSS e manipular no Javascript -->
+<main class="conteudo-principal" id="projetos">
+    <!-- delimitar seções (neste caso o painel principal) -->
+     <section class="paineis">
+        <h1 class="titulo">Nossos Produtos</h1>
+        <!-- Tag de divisão para imagens de fundo -->
+         <div class="imagem-painel projeto1 mostrar"></div>
+         <div class="imagem-painel projeto2"></div>
+         <div class="imagem-painel projeto3"></div>
+
+         <a href="#" id="btn-voltar" class="seta btn-voltar">voltar</a>
+         <a href="#" id="btn-avancar" class="seta btn-avancar">avançar</a>
+     </section>
+
+     <!-- parte abaixo da página principal -->
+     <section class="quem-somos" id="quem-somos">
+        <div class="conteudo">
+            <div class="informacoes">
+                <h2 class="titulo">Quem Somos</h2>
+
+                <p class="texto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam doloribus similique explicabo ut dolorum et beatae ipsa sed, velit magni dolore doloremque aspernatur sequi maiores itaque harum quod veritatis molestias?</p>
+            </div>
+
+            <img src="./imagens/Quem Somos 2.jpeg" class="imagem" alt="Mulher andando pelo escritório">
+            <img src="./imagens/Quem Somos 1.jpeg" class="imagem" alt="pedra e fundo nude">
+        </div>
+     </section>
+</main>
+
+    <!-- Parte inferior do site com dados e contatos com a tag FOOTER, NAV, A, DIVS -->
+    <footer class="rodape" id="contato">
+        <nav class="navegacao">
+            <a href="#" class="logo">
+                <img src="./imagens/Logo Cabecalho.png" alt="Logo Mada" class="imagem">
+                <span class="titulo">Madá Fornitune</span>
+            </a>
+
+            <div class="redes-sociais">
+                <a href="#" class="rede-social">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <a href="#" class="rede-social">
+                    <i class="fab fa-instagram-square"></i>
+                </a>
+
+                <a href="#" class="rede-social">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </nav>
+
+        <p class="copyright">Todos os direitos reservados</p>
+    </footer>
+
+    <script src="./JS/painel.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+</body>
+</html>
