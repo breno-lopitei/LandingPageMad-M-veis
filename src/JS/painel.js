@@ -1,5 +1,5 @@
 // Criar variáveis com o DOM chamando os elementos HTML necessários
-const imagensPainel = document.querySelectorAll('imagem-painel'); // Nodelist com todas as imagens do painel
+const imagensPainel = document.querySelectorAll('.imagem-painel'); // Nodelist com todas as imagens do painel
 const setaAvancar = document.getElementById('btn-avancar'); 
 const setaVoltar = document.getElementById('btn-voltar');
 
